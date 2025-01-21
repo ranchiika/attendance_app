@@ -1,4 +1,3 @@
-import 'package:attendance_app/main.dart';
 import 'package:attendance_app/ui/attend/attendance_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
