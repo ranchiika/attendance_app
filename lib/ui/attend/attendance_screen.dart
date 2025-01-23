@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:attendance_app/ui/attend/camera_screen.dart';
 import 'package:camera/camera.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -27,16 +26,16 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
   final CollectionReference dataCollection = FirebaseFirestore.instance.collection('attendance');
 
   @override
-  void initState(){
-    handleLocationPermission();
-    setDateTime();
-    setAttendStatus();
+  // void initState(){
+  //   handleLocationPermission();
+  //   setDateTime();
+  //   setAttendStatus();
 
-    if (image != null){
-      isLoading = true;
-      getGeoLocationPosition();
-    }
-  }
+  //   if (image != null){
+  //     isLoading = true;
+  //     getGeoLocationPosition();
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
