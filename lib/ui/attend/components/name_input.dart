@@ -18,6 +18,14 @@ return Padding(
       hintStyle: TextStyle(
         fontSize: 14,
         color: Colors.grey
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10),
+        borderSide: BorderSide(color: Colors.blueAccent),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10),
+        borderSide: BorderSide(color: Colors.blueAccent),
       )
     ),
   ),
