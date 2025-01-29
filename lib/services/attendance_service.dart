@@ -36,27 +36,27 @@ Future<void> submitAttendanceReport(BuildContext context,String address, String 
       ));
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomeScreen())
+        MaterialPageRoute(builder: (context) => const HomeScreen())
       );
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: Row(
           children: [
-            Icon(
+            const Icon(
               Icons.info_outline,
               color: Colors.white,
             ),
-            SizedBox(width: 10,),
+            const SizedBox(width: 10,),
             Expanded(
               child: Text(
                 "Ups, $e",
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               )
             )
           ],
         ),
         backgroundColor: Colors.blueAccent,
-        shape: StadiumBorder(),
+        shape: const StadiumBorder(),
         behavior: SnackBarBehavior.floating,
       ));
     }
@@ -64,21 +64,21 @@ Future<void> submitAttendanceReport(BuildContext context,String address, String 
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content: Row(
         children: [
-          Icon(
+          const Icon(
             Icons.error_outline,
             color: Colors.white,
           ),
-          SizedBox(width: 10,),
+          const SizedBox(width: 10,),
           Expanded(
             child: Text(
               "Ups, $error",
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
             ),
           )
         ],
       ),
       backgroundColor: Colors.blueAccent,
-      shape: StadiumBorder(),
+      shape: const StadiumBorder(),
       behavior: SnackBarBehavior.floating,
     ));
     Navigator.of(context).pop();
@@ -89,12 +89,12 @@ void showLoaderDialog(BuildContext context){
   AlertDialog alert = AlertDialog(
     content: Row(
       children: [
-      CircularProgressIndicator(
+      const CircularProgressIndicator(
         valueColor: AlwaysStoppedAnimation<Color>(Colors.blueAccent),
       ),
       Container(
-        margin: EdgeInsets.only(left: 20),
-        child: Text("Checking the data..."),
+        margin: const EdgeInsets.only(left: 20),
+        child: const Text("Checking the data..."),
         )
     ],),
   );
