@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 // an entry point for submitting the attendance report
 final CollectionReference dataCollection = FirebaseFirestore.instance.collection('attendance'); //entry point.
 
-Future<void> submitAttendanceReport(BuildContext context,String address, String name, String status, String timeStamp, String attendanceStatus) async{
+Future<void> submitAttendanceReport(BuildContext context,String address, String name, String timeStamp, String attendanceStatus) async{
   showLoaderDialog(context);
   dataCollection.add(
     {
