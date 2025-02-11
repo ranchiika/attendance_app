@@ -5,7 +5,7 @@ class DeleteDialog extends StatelessWidget {
   final String documentId;
   final CollectionReference dataCollection;
 
-  const DeleteDialog({super.key, required this.documentId, required this.dataCollection});
+  const DeleteDialog({super.key, required this.documentId, required this.dataCollection, required Null Function() onConfirm});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class DeleteDialog extends StatelessWidget {
           color: Colors.black
         ),
       ),
-      content: Text(
+      content: const Text(
         "Are you sure want to delete this history data?",
         style: TextStyle(
           fontSize: 18,
@@ -26,7 +26,7 @@ class DeleteDialog extends StatelessWidget {
       ),
       actions: [
         TextButton(
-          child: Text(
+          child: const Text(
             "Yes",
             style: TextStyle(
               fontSize: 14,
@@ -35,12 +35,13 @@ class DeleteDialog extends StatelessWidget {
           ),
 
           onPressed: (){
+            // untuk berkomunikasi dengan database untuk melakukan penghapusan data dari database (DB)
             dataCollection.doc(documentId).delete();
-            Navigator.pop(context);
+            Navigator.pop(context); 
           },
         ),
         TextButton(
-          child: Text(
+          child: const Text(
             "No",
             style: TextStyle(
               fontSize: 14,
@@ -48,7 +49,7 @@ class DeleteDialog extends StatelessWidget {
             ),
           ),
           onPressed: (){
-            Navigator.pop(context);
+            Navigator.pop(context); 
           },
         )
       ],

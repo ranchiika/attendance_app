@@ -24,10 +24,10 @@ class AttendanceHistoryCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         elevation: 5,
-        margin: EdgeInsets.all(10),
+        margin: const EdgeInsets.all(10),
         color: Colors.white,
         child: Padding(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           child: Row(
             children: [
               Container(
@@ -35,19 +35,19 @@ class AttendanceHistoryCard extends StatelessWidget {
                 width: 50,
                 decoration: BoxDecoration(
                   color: Colors.primaries[Random().nextInt(Colors.primaries.length)],
-                  borderRadius: BorderRadius.all(Radius.circular(10))
+                  borderRadius: const BorderRadius.all(Radius.circular(10))
                 ),
                 child: Center(
                   child: Text(
-                    data["name"][0].toUpperCase(),
-                    style: TextStyle(
+                    data["name"][0].toUpperCase(), //manggil via parameter data (Name dapet dari attendance_service.dart)
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 14
                     ),
                   ),
                 ),
               ),
-              SizedBox(width: 10,),
+              const SizedBox(width: 10,),
               Flexible(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,7 +55,7 @@ class AttendanceHistoryCard extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Expanded(
+                        const Expanded(
                           flex: 4,
                           child: Text(
                             "Name",
@@ -68,7 +68,7 @@ class AttendanceHistoryCard extends StatelessWidget {
                         Expanded(
                           child: Text(
                             data['name'],
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.black,
                               fontSize: 14
                             ),
@@ -78,7 +78,7 @@ class AttendanceHistoryCard extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Text(
+                        const Text(
                           "Attendance Status",
                           style: TextStyle(
                             color: Colors.black,
@@ -87,7 +87,7 @@ class AttendanceHistoryCard extends StatelessWidget {
                         ),
                         Text(
                           data['description'],
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.black,
                             fontSize: 14
                           ),
